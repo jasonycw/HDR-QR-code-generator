@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HDR QR Code Generator</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://jasonycw.github.io/screen-tests/HDR/white/QR-code/og-image.png">
+    <meta property="og:description" content="▫️◽◻️⬜ HDR QR ⬜◻️◽▫️">
+    <meta property="og:site_name" content="Jason Yu">
     <style>
         body {
             margin: 0;
@@ -333,9 +337,9 @@
 
             // Redirect on click
             box.addEventListener('click', () => {
-                if (currentBase64) {
-                    const encodedData = encodeURIComponent(currentBase64);
-                    const target = `http://jasonycw.github.io/screen-tests/HDR/white/QR-code?base64=${encodedData}`;
+                if (input.value) {
+                    const encodedData = encodeURIComponent(input.value);
+                    const target = `http://jasonycw.github.io/screen-tests/HDR/white/QR-code?content=${input.value}`;
                     window.open(target, '_blank');
                 }
             });
